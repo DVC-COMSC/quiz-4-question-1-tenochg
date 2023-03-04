@@ -12,9 +12,14 @@ for i in range(10):
         if flag > 1:
             count =  count + 1
             flag = 0
+if flag > 1:
+    count = count + 1
         
     
 print(count)
+
+
+
 
 
     
