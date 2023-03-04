@@ -2,24 +2,31 @@
 # ******************************
 # Make your Code
 # ******************************
-count = 0
-flag = False
+count = []
+flag = 0
 
 for i in range(10):
     num = int(input("Enter a number: "))
-    if num % 2 == 0:
-        if flag == False:
-            flag = True
-        count += 1
-    else:
-        if flag and count > 1:
-            count -= 1
-        flag = False
+    count.append(num)
 
-if flag and count > 1:
-    count -= 1
+totalc = 0
 
-print(count)
+for i in count:
+    if i % 2 == 0:
+        flag = flag + 1
+    else: 
+        if flag > 0:
+            totalc = totalc + 1
+            flag = 0
+if flag > 0:
+    totalc = totalc + 1
+
+    
+print(totalc)
+        
+
+
+
 
 
 
