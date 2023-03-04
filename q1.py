@@ -6,19 +6,23 @@ count = 0
 flag = False
 
 for i in range(10):
-    x = int(input("Enter a number: "))
-    if x % 2 == 0:
-        if not flag:
-            count += 1
+    num = int(input("Enter a number: "))
+    if num % 2 == 0:
+        if flag == False:
             flag = True
+        count += 1
     else:
-        flag = False     
-    
-    
-    
-    
+        if flag and count > 1:
+            count -= 1
+        flag = False
+
+if flag and count > 1:
+    count -= 1
 
 print(count)
+
+
+
 
 
 # Requirement
