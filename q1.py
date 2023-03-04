@@ -9,17 +9,11 @@ for i in range(10):
     if num % 2 == 0:
         flag = flag + 1
     else:
-        if flag > 1:
+        if flag >= 2:
             count =  count + 1
-            flag = 0
-if flag > 1:
-    count = count + 1
-        
-    
+    flag = 0
+          
 print(count)
-
-
-
 
 
     
